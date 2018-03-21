@@ -1,0 +1,22 @@
+{
+    "name": "webignition/internet-media-type-interface",
+    "description": "PHP interfaces for a model of an http://en.wikipedia.org/wiki/Internet_media_type",
+    "keywords": ["internet media type", "media type", "media-type", "content type", "content-type"],
+    "homepage": "https://github.com/webignition/internet-media-type-interface",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jon Cram",
+            "email": "jon@webignition.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "webignition\\InternetMediaTypeInterface\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6.0"
+    }
+}
