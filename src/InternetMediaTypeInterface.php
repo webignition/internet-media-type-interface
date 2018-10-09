@@ -101,7 +101,7 @@ interface InternetMediaTypeInterface
      *
      * @return ParameterInterface|null
      */
-    public function getParameter($attribute): ?ParameterInterface;
+    public function getParameter(string $attribute): ?ParameterInterface;
 
     /**
      * Gets an interable collection of parameters.
