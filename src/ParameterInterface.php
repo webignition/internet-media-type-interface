@@ -45,14 +45,14 @@ interface ParameterInterface
      *
      * @param string $value
      */
-    public function setValue(string $value);
+    public function setValue(?string $value);
 
     /**
      * Gets the value.
      *
      * @return string
      */
-    public function getValue(): string;
+    public function getValue(): ?string;
 
     public function __toString(): string;
 }
