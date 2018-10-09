@@ -29,14 +29,14 @@ interface ParameterInterface
      *
      * @param string $attribute
      */
-    public function setAttribute($attribute);
+    public function setAttribute(string $attribute);
 
     /**
      * Gets the attribute.
      *
      * @return string
      */
-    public function getAttribute();
+    public function getAttribute(): string;
 
     /**
      * Sets the value of the parameter.
@@ -45,17 +45,14 @@ interface ParameterInterface
      *
      * @param string $value
      */
-    public function setValue($value);
+    public function setValue(string $value);
 
     /**
      * Gets the value.
      *
      * @return string
      */
-    public function getValue();
+    public function getValue(): string;
 
-    /**
-     * @return string
-     */
-    public function __toString();
+    public function __toString(): string;
 }

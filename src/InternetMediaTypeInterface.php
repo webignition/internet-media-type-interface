@@ -44,14 +44,14 @@ interface InternetMediaTypeInterface
      *
      * @param string $type
      */
-    public function setType($type);
+    public function setType(string $type);
 
     /**
      * Gets the type
      *
      * @return string
      */
-    public function getType();
+    public function getType(): ?string;
 
     /**
      * Sets the subtype.
@@ -60,14 +60,14 @@ interface InternetMediaTypeInterface
      *
      * @param string $subtype
      */
-    public function setSubtype($subtype);
+    public function setSubtype(string $subtype);
 
     /**
      * Gets the subtype.
      *
      * @return string
      */
-    public function getSubtype();
+    public function getSubtype(): ?string;
 
     /**
      * Adds a parameter.
@@ -83,7 +83,7 @@ interface InternetMediaTypeInterface
      *
      * @return bool
      */
-    public function hasParameter($attribute);
+    public function hasParameter(string $attribute): bool;
 
     /**
      * Removes a parameter previously set.
@@ -101,7 +101,7 @@ interface InternetMediaTypeInterface
      *
      * @return ParameterInterface|null
      */
-    public function getParameter($attribute);
+    public function getParameter($attribute): ?ParameterInterface;
 
     /**
      * Gets an interable collection of parameters.
@@ -115,10 +115,7 @@ interface InternetMediaTypeInterface
      *
      * @return string
      */
-    public function getTypeSubtypeString();
+    public function getTypeSubtypeString(): string;
 
-    /**
-     * @return string
-     */
-    public function __toString();
+    public function __toString(): string;
 }
