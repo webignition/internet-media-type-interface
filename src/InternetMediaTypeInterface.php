@@ -3,7 +3,7 @@
 namespace webignition\InternetMediaTypeInterface;
 
 /**
- * Models an Internet Media Type as defined as:
+ * Models an Internet Media Type as defined as:.
  *
  * HTTP uses Internet Media Types [17] in the Content-Type (section 14.17) and
  * Accept (section 14.1) header fields in order to provide open and extensible data
@@ -29,7 +29,6 @@ namespace webignition\InternetMediaTypeInterface;
  *       Content-Type: Message/Partial;
  *           number=2; total=3;
  *           id="oc=jpbe0M2Yt4s@thumper.bellcore.com";
- *
  */
 interface InternetMediaTypeInterface
 {
@@ -37,58 +36,37 @@ interface InternetMediaTypeInterface
     public const PARAMETER_ATTRIBUTE_VALUE_SEPARATOR = '=';
     public const ATTRIBUTE_PARAMETER_SEPARATOR = ';';
 
+    public function __toString(): string;
+
     /**
-     * Sets the type
-     *
-     * For a media type of "text/html", the type is "text"
-     *
-     * @param string $type
+     * For a media type of "text/html", the type is "text".
      */
     public function setType(string $type): void;
 
     /**
-     * Gets the type
-     *
-     * @return string
+     * Gets the type.
      */
     public function getType(): ?string;
 
     /**
-     * Sets the subtype.
-     *
-     * For a media type of "text/html", the subtype is "html"
-     *
-     * @param string $subtype
+     * For a media type of "text/html", the subtype is "html".
      */
     public function setSubtype(string $subtype): void;
 
-    /**
-     * Gets the subtype.
-     *
-     * @return string
-     */
     public function getSubtype(): ?string;
 
     /**
      * Adds a parameter.
-     *
-     * @param ParameterInterface $parameter
      */
     public function addParameter(ParameterInterface $parameter): void;
 
     /**
      * Checks if this instance has a parameter matching the given attribute.
-     *
-     * @param string $attribute
-     *
-     * @return bool
      */
     public function hasParameter(string $attribute): bool;
 
     /**
      * Removes a parameter previously set.
-     *
-     * @param ParameterInterface $parameter
      */
     public function removeParameter(ParameterInterface $parameter): void;
 
@@ -96,10 +74,6 @@ interface InternetMediaTypeInterface
      * Gets a parameter matching the given attribute.
      *
      * A value of null MUST be returned if the parameter is not present.
-     *
-     * @param string $attribute
-     *
-     * @return ParameterInterface|null
      */
     public function getParameter(string $attribute): ?ParameterInterface;
 
@@ -112,10 +86,6 @@ interface InternetMediaTypeInterface
 
     /**
      * Returns a string representation of the type and subtype in the form "{type}/{subtype}".
-     *
-     * @return string
      */
     public function getTypeSubtypeString(): string;
-
-    public function __toString(): string;
 }
