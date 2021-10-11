@@ -44,7 +44,7 @@ interface InternetMediaTypeInterface
      *
      * @param string $type
      */
-    public function setType(string $type);
+    public function setType(string $type): void;
 
     /**
      * Gets the type
@@ -60,7 +60,7 @@ interface InternetMediaTypeInterface
      *
      * @param string $subtype
      */
-    public function setSubtype(string $subtype);
+    public function setSubtype(string $subtype): void;
 
     /**
      * Gets the subtype.
@@ -74,7 +74,7 @@ interface InternetMediaTypeInterface
      *
      * @param ParameterInterface $parameter
      */
-    public function addParameter(ParameterInterface $parameter);
+    public function addParameter(ParameterInterface $parameter): void;
 
     /**
      * Checks if this instance has a parameter matching the given attribute.
@@ -90,7 +90,7 @@ interface InternetMediaTypeInterface
      *
      * @param ParameterInterface $parameter
      */
-    public function removeParameter(ParameterInterface $parameter);
+    public function removeParameter(ParameterInterface $parameter): void;
 
     /**
      * Gets a parameter matching the given attribute.
@@ -108,7 +108,7 @@ interface InternetMediaTypeInterface
      *
      * @return ParameterInterface[]
      */
-    public function getParameters();
+    public function getParameters(): array;
 
     /**
      * Returns a string representation of the type and subtype in the form "{type}/{subtype}".
