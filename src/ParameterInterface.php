@@ -29,7 +29,7 @@ interface ParameterInterface
      *
      * @param string $attribute
      */
-    public function setAttribute(string $attribute);
+    public function setAttribute(string $attribute): void;
 
     /**
      * Gets the attribute.
@@ -43,9 +43,9 @@ interface ParameterInterface
      *
      * For a parameter of "charset=UTF-8" the value is "UTF-8"
      *
-     * @param string $value
+     * @param ?string $value
      */
-    public function setValue(?string $value);
+    public function setValue(?string $value): void;
 
     /**
      * Gets the value.
