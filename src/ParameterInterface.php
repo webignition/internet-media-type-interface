@@ -20,7 +20,7 @@ namespace webignition\InternetMediaTypeInterface;
  */
 interface ParameterInterface
 {
-    const ATTRIBUTE_VALUE_SEPARATOR = '=';
+    public const ATTRIBUTE_VALUE_SEPARATOR = '=';
 
     /**
      * Sets the attribute (name) of the parameter.

@@ -33,9 +33,9 @@ namespace webignition\InternetMediaTypeInterface;
  */
 interface InternetMediaTypeInterface
 {
-    const TYPE_SUBTYPE_SEPARATOR = '/';
-    const PARAMETER_ATTRIBUTE_VALUE_SEPARATOR = '=';
-    const ATTRIBUTE_PARAMETER_SEPARATOR = ';';
+    public const TYPE_SUBTYPE_SEPARATOR = '/';
+    public const PARAMETER_ATTRIBUTE_VALUE_SEPARATOR = '=';
+    public const ATTRIBUTE_PARAMETER_SEPARATOR = ';';
 
     /**
      * Sets the type
