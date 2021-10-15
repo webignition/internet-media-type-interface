@@ -24,26 +24,16 @@ interface ParameterInterface
     public function __toString(): string;
 
     /**
-     * Sets the attribute (name) of the parameter.
+     * Gets the attribute.
      *
      * For a parameter of "charset=UTF-8" the attribute is "charset"
-     */
-    public function setAttribute(string $attribute): void;
-
-    /**
-     * Gets the attribute.
      */
     public function getAttribute(): string;
 
     /**
-     * Sets the value of the parameter.
+     * Gets the value.
      *
      * For a parameter of "charset=UTF-8" the value is "UTF-8"
-     */
-    public function setValue(?string $value): void;
-
-    /**
-     * Gets the value.
      */
     public function getValue(): ?string;
 }
