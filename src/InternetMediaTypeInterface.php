@@ -39,26 +39,31 @@ interface InternetMediaTypeInterface
     public function __toString(): string;
 
     /**
-     * For a media type of "text/html", the type is "text".
-     */
-    public function setType(string $type): void;
-
-    /**
      * Gets the type.
+     *
+     * For a media type of "text/html", the type is "text".
      */
     public function getType(): ?string;
 
     /**
+     * Create a new instance from an existing instance and set the type.
+     */
+    public function withType(string $type): InternetMediaTypeInterface;
+
+    /**
      * For a media type of "text/html", the subtype is "html".
      */
-    public function setSubtype(string $subtype): void;
-
     public function getSubtype(): ?string;
 
     /**
-     * Adds a parameter.
+     * Create a new instance from an existing instance and set the subtype.
      */
-    public function addParameter(ParameterInterface $parameter): void;
+    public function withSubtype(string $subtype): InternetMediaTypeInterface;
+
+    /**
+     * Create a new instance from an existing instance and add a new parameter.
+     */
+    public function withParameter(ParameterInterface $parameter): InternetMediaTypeInterface;
 
     /**
      * Checks if this instance has a parameter matching the given attribute.
@@ -66,9 +71,9 @@ interface InternetMediaTypeInterface
     public function hasParameter(string $attribute): bool;
 
     /**
-     * Removes a parameter previously set.
+     * Create a new instance from an existing instance and remove a parameter.
      */
-    public function removeParameter(ParameterInterface $parameter): void;
+    public function removeParameter(ParameterInterface $parameter): InternetMediaTypeInterface;
 
     /**
      * Gets a parameter matching the given attribute.
